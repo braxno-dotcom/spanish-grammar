@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://braxno-dotcom.github.io/spanish-grammar/sitemap.xml
