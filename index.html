@@ -20,14 +20,17 @@
     background: #f5f0eb;
     color: #2c2c2c;
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    /* ⚠️ Было `display:flex` с центровкой — и это ломало страницу на телефоне.
+       Блок с Люси лежит на уровне body, то есть становился ВТОРОЙ КОЛОНКОЙ рядом
+       с грамматикой: колонки сжимались вдвое, а карточка Люси уезжала за правый
+       край и обрезалась. Поймано 16 сен 2026 по снимку с телефона.
+       Теперь обычный поток: всё идёт сверху вниз, центровка — через margin auto. */
   }
   .container {
     text-align: center;
     padding: 40px 20px;
     max-width: 700px;
+    margin: 0 auto;
   }
   h1 { font-size: 1.8em; font-weight: 600; margin-bottom: 8px; color: #333; }
   p { color: #888; margin-bottom: 36px; font-size: 0.95em; }
